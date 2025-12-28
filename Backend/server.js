@@ -9,3 +9,8 @@ const app = express();
 
 app.use(cors()); //Add to cors on deployment { origin: "*", methods: "GET,POST,PUT,DELETE,PATCH" }
 app.use(express.json());
+
+//LISTENING TO THE SERVER
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Server is running on port ${process.env.PORT || 5000}`);
+});
